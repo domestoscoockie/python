@@ -1,3 +1,13 @@
+'''this program let you make your own test for test your knowlage. For that you just need pdf file with questions and answears in format:
+1. question?
+a) answear
+b) answear
+2. question?
+a) answear
+b) answear
+etc...
+have fun
+'''
 import tkinter as tk
 from PIL import ImageFont,Image,ImageTk
 from tkinter import filedialog, ttk
@@ -369,7 +379,7 @@ def saving_page():
         list_of_dict_json = json.dumps(list_of_dict,ensure_ascii = False)
         good_answerws_dict_json = json.dumps(good_answerws_dict,ensure_ascii = False)
         try:
-            with open(f'{name}','w',encoding='UTF-8') as json_file, open(f'{name}_answers','w',encoding='UTF-8') as json_file_answers, open('saves','a',encoding='UTF-8') as saves:
+            with open(f'{name}','w',encoding='UTF-8') as json_file, open(f'{name}_answers','w',encoding='UTF-8') as json_file_answers, open('saves.txt','a',encoding='UTF-8') as saves:
                 json_file.write(list_of_dict_json)
                 json_file_answers.write(good_answerws_dict_json)
                 saves.write(f'{name}\n')
